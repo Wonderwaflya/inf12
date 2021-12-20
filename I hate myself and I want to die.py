@@ -47,7 +47,7 @@ def matrix_element_input(index: int, n_columns: int) -> str:
         quantity += 1
         if quantity > 5:
             print("[Ошибка]: Выход за границы диапазона.")
-            print("Повторите ввод данных, учитывая, что на вход подаётся строка, длиной не бльше 5.")
+            print("Повторите ввод данных, учитывая, что на вход подаётся строка, длиной не больше 5.")
             return matrix_element_input(index, n_columns)
         if ord(symbol) < 48 or ord(symbol) > 122 or 90 < ord(symbol) < 97 or 57 < ord(symbol) < 65:
             print("[Ошибка]: Неверный тип входных данных.")
@@ -115,8 +115,8 @@ def element_base(matrix: [str]):
                 c = int(ord(i) - 87) + 1
             else:
                 c = int(i) + 1
-        if base < c:
-            base = c
+            if base < c:
+                base = c
         mtrx.append(str(base))
     return mtrx
 
